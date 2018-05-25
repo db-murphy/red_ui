@@ -1,0 +1,21 @@
+.fz12{font-size: 12px;}
+.fz0{font-size: 0px;}
+.fl{float:left;}
+.fr{float:right;}
+.fn{float:none;}
+.al{text-align:left;}
+.ac{text-align:center;}
+.ar{text-align:right;}
+.ov{overflow:hidden;}
+.va{vertical-align: middle;}
+.pr{position: relative}
+.ib{display: inline-block;}
+.db{display: block;}
+.txt-red{color: red;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*zoom: 1;}
+.disabled{cursor: not-allowed; .el-button{cursor: not-allowed;}}
+
+.mr17{
+    margin-right: 17px;
+}

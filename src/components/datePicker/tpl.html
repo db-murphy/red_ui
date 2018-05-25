@@ -1,0 +1,34 @@
+<div class="redui-datepicker-inner">
+    <i class="date-icon"></i>
+    <p class="date-val">2018-02-23</p>
+    <i class="arrow-down"></i>
+    <div class="picker-content clearfix">
+        <ul class="date-type">
+            <li data-type="date" class="date-li <%if(type == 'date'){%>active<%}%>">按天查询</li>
+            <li data-type="day" class="date-li <%if(type == 'day'){%>active<%}%>">按周查询</li>
+            <li data-type="month" class="date-li <%if(type == 'month'){%>active<%}%>">按月查询</li>
+            <li data-type="custom" class="date-li <%if(type == 'custom'){%>active<%}%>">自定义时间段</li>
+        </ul>
+        <div class="date">
+            <div class="date-header">
+                <p class="date-now">2018-4</p>
+                <div class="c">
+                    <a href="javascript:;" class="prev"></a>
+                    <a href="javascript:;" class="next"></a>
+                </div>
+            </div>
+            <div class="date-con">
+                <ul class="day-list clearfix">
+                    <li>日</li>
+                    <li>一</li>
+                    <li>二</li>
+                    <li>三</li>
+                    <li>四</li>
+                    <li>五</li>
+                    <li>六</li>
+                </ul>
+                <ul class="date-list"></ul>
+            </div>
+        </div>
+    </div>
+</div>

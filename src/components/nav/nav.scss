@@ -1,0 +1,141 @@
+@import '../../scss/color';
+@import './theme';
+
+.reddata-nav{
+    // 主题样式
+    @include nav-them-reddata();
+    height: 75px;
+    background-color: $reddataWhite;
+
+    .inner{
+        height: 100%;
+        // padding-left: 350px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        h1{
+            width: 252px;
+            height: 34px;
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translate(0, -50%);
+            background: url(./logo.png) no-repeat left top;
+            background-size: 100% 100%;
+        }
+    }
+
+    nav{
+        height: 100%;
+
+        a{
+            cursor: pointer;
+        }
+
+        &>li{
+            float: left;
+            list-style: none;
+            line-height: 75px;
+            position: relative;
+            width: 90px;
+            text-align: center;
+
+            &::after{
+                content: '';
+                position: absolute;
+                width: 90px;
+                height: 4px;
+                background-color: $reddataWhite;
+                left: 0;
+                bottom: 0;
+                z-index: 2;
+            }
+
+            &:hover{
+                .second-nav{
+                    display: block;
+                }
+
+                &>a::after{
+                    content: '';
+                    width: 100%;
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                }
+            }
+
+            &>a{
+                color: $reddataDark;
+                font-size: 14px;
+                position: relative;
+                cursor: pointer;
+            }
+        }
+
+        .second-nav{
+            position: absolute;
+            width: 90px;
+            background-color: $reddataWhite;
+            left: 0;
+            top: 75px;
+            display: none;
+            box-shadow: 0 3px 5px $reddataGray;
+            z-index: 1;
+            border-radius: 2px;
+
+            li{
+                height: 37px;
+                text-align: center;
+                line-height: 37px;
+                list-style: none;
+
+                a{
+                    display: block;
+                    height: 37px;
+                    color: $reddataDark;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .user-msg{
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-50%);
+
+        .redicon-msg, .redicon-help{
+            cursor: pointer;
+        }
+
+        .need-login{
+            font-size: 14px;
+            color: $reddataDarkWeak;
+            padding: 6px 12px;
+            border: 1px solid $reddataDarkWeak;
+            border-radius: 100px;
+            display: inline-block;
+            line-height: 1;
+            height: 26px;
+            box-sizing: border-box;
+        }
+
+        .user-name{
+            font-size: 14px;
+            color: $reddataDarkWeak;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@mixin datepicker-them-reddata() {
+    &.them-reddata{
+        border: 1px solid $reddataGrayWeak;
+        background-color: $reddataWhite;
+
+        &:hover{
+            // border-color: $reddataMain;
+        }
+
+        .date-val{
+            color: $reddataDarkWeak;
+        }
+    }
+}

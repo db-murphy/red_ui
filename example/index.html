@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>red_ui</title>
+    <link rel="stylesheet" href="../build/red_ui.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="../lib/hljs/hljs.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <canvas id="canvas"></canvas>
+        <div class="header-inner">
+            <div class="container">
+                <h1>Red-UI</h1>
+                <p>为闪购中台定制各种主题UI组件。</p>
+                <p>包括图标、下拉菜单、导航、警告框、弹出框等更多功能。</p>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-10 pb10" style="padding-bottom: 500px">
+                <div class="ml20 pr10">
+                    <div id="start" class="pt20">
+                        <h2>组件库引入</h2>
+                        <pre>
+                            <code class="html xml">
+    &lt;link rel="stylesheet" href="//static.360buyimg.com/shangou/red_ui/dist/v1.0.0/red_ui.css"&gt;
+    &lt;script src="//static.360buyimg.com/shangou/red_ui/lib/jquery/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
+    &lt;script src="//static.360buyimg.com/shangou/red_ui/dist/v1.0.0/red_ui.js"&gt;&lt;/script&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div id="icon" class="pt20">
+                        <h2>图标</h2>
+                        <div class="pt10">
+                            <ul class="icon-list mb10">
+                                <li>
+                                    <i class="redicon redicon-msg"></i>
+                                    <span>redicon icon-msg</span>
+                                </li>
+                                <li>
+                                    <i class="redicon redicon-help"></i>
+                                    <span>redicon redicon-help</span>
+                                </li>
+                                <li>
+                                    <i class="redicon redicon-set"></i>
+                                    <span>redicon redicon-set</span>
+                                </li>
+                                <li>
+                                    <i class="redicon redicon-date"></i>
+                                    <span>redicon redicon-date</span>
+                                </li>
+                            </ul>
+                            <p class="fz12 them-reddata font-dark">代码示例:</p>
+                            <pre>
+                                <code class="html xml">
+    &lt;i class="redicon icon-msg"&gt;&lt;/i&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div id="them" class="pt20">
+                        <h2>主题色</h2>
+                        <div class="pl10">
+                            <h3 class="pt10 pb10 fz12">数据汇</h3>
+                            <ul class="them-list clearfix">
+                                <li class="fl">
+                                    <div class="them-reddata bg-dark"></div>
+                                    <span class="db them-reddata font-dark fz12 pt10 pb10 ac">dark</span>
+                                </li>
+                                <li class="fl">
+                                    <div class="them-reddata bg-dark-weak"></div>
+                                    <span class="db them-reddata font-dark fz12 pt10 pb10 ac">dark-weak</span>
+                                </li>
+                                <li class="fl">
+                                    <div class="them-reddata bg-gray"></div>
+                                    <span class="db them-reddata font-dark fz12 pt10 pb10 ac">gray</span>
+                                </li>
+                                <li class="fl">
+                                    <div class="them-reddata bg-gray-weak"></div>
+                                    <span class="db them-reddata font-dark fz12 pt10 pb10 ac">gray-weak</span>
+                                </li>
+                                <li class="fl">
+                                    <div class="them-reddata bg-white"></div>
+                                    <span class="db them-reddata font-dark fz12 pt10 pb10 ac">white</span>
+                                </li>
+                                <li class="fl">
+                                    <div class="them-reddata bg-waring"></div>
+                                    <span class="db them-reddata font-dark fz12 pt10 pb10 ac">waring</span>
+                                </li>
+                                <li class="fl">
+                                    <div class="them-reddata bg-main"></div>
+                                    <span class="db them-reddata font-dark fz12 pt10 pb10 ac">main</span>
+                                </li>
+                                <li class="fl">
+                                    <div class="them-reddata bg-green"></div>
+                                    <span class="db them-reddata font-dark fz12 pt10 pb10 ac">green</span>
+                                </li>
+                            </ul>
+                            <p class="fz12 them-reddata font-dark">字体颜色示例:</p>
+                            <pre>
+                                <code class="html xml">
+    &lt;p class="them-reddata font-dark"&gt;我是黑色文字&lt;/p&gt;
+                                </code>
+                            </pre>
+                            <p class="fz12 them-font-reddata dark">背景颜色示例:</p>
+                            <pre>
+                                <code class="html xml">
+    &lt;div class="them-reddata bg-dark"&gt;我是黑色背景&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div id="layout" class="pt20">
+                        <h2 class="pb10">布局</h2>
+                        <div class="row mb10">
+                            <div class="col-6 h100 them-reddata bg-dark fz12 font-white ac lh100">col-6</div>
+                            <div class="col-6 h100 them-reddata bg-dark-weak fz12 font-white ac lh100">col-6</div>
+                        </div>
+                        <p class="fz12 them-reddata font-dark">代码示例:</p>
+                        <pre>
+                            <code class="html xml">
+&lt;div class="row"&gt;<br />    &lt;div class="col-6"&gt;&lt;/div&gt;<br />    &lt;div class="col-6"&gt;&lt;/div&gt;<br />&lt;/div&gt;
+                            </code>
+                        </pre>
+                        <div class="row mb10">
+                            <div class="col-10 h100 them-reddata bg-dark fz12 font-white ac lh100">col-10</div>
+                            <div class="col-2 h100 them-reddata bg-dark-weak fz12 font-white ac lh100">col-2</div>
+                        </div>
+                        <p class="fz12 them-reddata font-dark">代码示例:</p>
+                        <pre>
+                            <code class="html xml">
+&lt;div class="row"&gt;<br />    &lt;div class="col-10"&gt;&lt;/div&gt;<br />    &lt;div class="col-2"&gt;&lt;/div&gt;<br />&lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div id="nav" class="pt20">
+                        <h2>导航</h2>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="reddata-nav"></div>
+                            </div>
+                        </div>
+                        <pre>
+                            <code class="html xml">
+    &lt;div class="reddata-nav"&gt;&lt;/div&gt;
+                            </code>
+                        </pre>
+                        <pre>
+                            <code class="javascript">
+    var nav = $('.reddata-nav').createReddataNav({
+        theme: 'them-reddata',
+        dataSrc: {
+            menu: [
+                {
+                    name: '首页',
+                    link: '//red.jd.com',
+                    target: '_blank'
+                },
+                {
+                    name: '运营分析',
+                    link: '',
+                    target: '_blank',
+                    child: [
+                        {
+                            name: '流量分析',
+                            link: '',
+                            target: ''
+                        },
+                        {
+                            name: '商品分析',
+                            link: '//vip.com',
+                            target: '_blank'
+                        }
+                    ]
+                },
+                {
+                    name: '实时洞察',
+                    link: '',
+                    target: '_blank',
+                    child: [
+                        {
+                            name: '流量分析',
+                            link: '//taobao.com',
+                            target: '_blank'
+                        }
+                    ]
+                },
+                {
+                    name: '自助分析',
+                    link: '//baidu.com',
+                    target: '_blank'
+                }
+            ],
+            userName: '',
+            jumpToLogin: '//passport.jd.com/new/login.aspx'
+        }
+    });
+
+    // 设置用户信息
+    nav.setUserName('huangxiaolong8');
+                            </code>
+                        </pre>
+                    </div>
+                    <div id="datepicker" class="pt20">
+                        <h2 class="pb10">日历</h2>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="redui-date-picker"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div id="nav" class="pt20">
+                    <ul class="bs-docs-sidenav">
+                        <li>
+                          <a href="#start">组件库引入</a>
+                        </li>
+                        <li>
+                          <a href="#icon">图标</a>
+                        </li>
+                        <li>
+                          <a href="#them">主题色</a>
+                        </li>
+                        <li>
+                          <a href="#layout">布局</a>
+                        </li>
+                        <li>
+                          <a href="#nav">导航</a>
+                        </li>
+                        <li>
+                          <a href="#datepicker">日历</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="glyphicon glyphicon-glass" aria-hidden="true"></span>
+</body>
+<script src="../lib/jquery/jquery-3.3.1.min.js"></script>
+<script src="../build/red_ui.js"></script>
+<script src="./js/anima.js"></script>
+<script src="./js/index.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</html>

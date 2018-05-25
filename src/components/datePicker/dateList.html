@@ -1,0 +1,7 @@
+<%for(var i = 0; i < liArr.length; i++){%>
+    <li class="<%if(liArr[i].active){%>active<%}%> <%if(liArr[i].start){%>start<%}%> <%if(liArr[i].end){%>end<%}%>">
+        <div class="left"></div>
+        <div class="date-num"><%=liArr[i].num%></div>
+        <div class="right"></div>
+    </li>
+<%}%>

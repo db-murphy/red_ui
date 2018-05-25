@@ -1,0 +1,22 @@
+.redicon{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+    &.redicon-msg{
+        background: url(../assets/msg.svg) no-repeat center center;
+        background-size: 100% 100%;
+    }
+    &.redicon-help{
+        background: url(../assets/help.svg) no-repeat center center;
+        background-size: 100% 100%;
+    }
+    &.redicon-set{
+        background: url(../assets/set.svg) no-repeat center center;
+        background-size: 100% 100%;
+    }
+    &.redicon-date{
+        background: url(../assets/date.svg) no-repeat center center;
+        background-size: 100% 100%;
+    }
+}

@@ -1,0 +1,28 @@
+<div class="inner">
+    <h1></h1>
+    <nav class="clearfix">
+        <%for(var i=0; i < menu.length; i++){%>
+            <li>
+                <a href="<%=menu[i].link%>" target="<%=menu[i].target%>"><%=menu[i].name%></a>
+                <%if(menu[i].child){%>
+                    <ul class="second-nav">
+                        <%for(var j = 0; j < menu[i].child.length; j++){%>
+                            <li>
+                                <a href="<%=menu[i].child[j].link%>" target="<%=menu[i].child[j].target%>"><%=menu[i].child[j].name%></a>
+                            </li>
+                        <%}%>
+                    </ul>
+                <%}%>
+            </li>
+        <%}%>
+    </nav>
+    <div class="user-msg">
+        <!-- <i class="redicon redicon-msg mr17" style="width: 20px; height: 20px;"></i>
+        <i class="redicon redicon-help mr17" style="width: 20px; height: 20px;"></i> -->
+        <%if(userName){%>
+            <a href="javascript:;" class="user-name"><%=userName%></a>
+        <%}else{%>
+            <a href="<%=jumpToLogin%>" class="need-login">ERP登录</a>
+        <%}%>
+    </div>
+</div>

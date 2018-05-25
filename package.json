@@ -1,0 +1,39 @@
+{
+  "name": "red_ui",
+  "version": "v1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "http-server . -p 7000",
+    "build": "webpack --progress --colors",
+    "watch": "webpack --progress --colors --watch"
+  },
+  "dependencies": {
+    "baidutemplate": "^1.0.5-dev"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.4.1",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "colorful": "^2.1.0",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "gulp": "^3.9.1",
+    "gulp-sftp": "^0.1.5",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "ora": "^2.1.0",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.1",
+    "shelljs": "^0.8.2",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.1.2"
+  }
+}

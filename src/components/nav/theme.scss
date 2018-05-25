@@ -1,0 +1,36 @@
+@mixin nav-them-reddata() {
+    &.them-reddata{
+        nav {
+            &>li:hover>a{
+                color: $reddataMain;
+
+                &::after{
+                    border-top: 2px solid $reddataMain;
+                }
+            }
+
+            .second-nav li:hover a{
+                color: $reddataMain;
+            }
+        }
+
+        .need-login:hover{
+            border-color: $reddataMain;
+            color: $reddataMain;
+        }
+
+        .user-name:hover{
+            color: $reddataMain;
+        }
+
+        .redicon-msg:hover{
+            background: url(../../assets/msg-active.svg) no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        .redicon-help:hover{
+            background: url(../../assets/help-active.svg) no-repeat center center;
+            background-size: 100% 100%;
+        }
+    }
+}
