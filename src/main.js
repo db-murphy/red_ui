@@ -15,3 +15,25 @@ const cpArr = [
 cpArr.forEach((item, index)=>{
     item();
 });
+
+$(document).bind('click', function(ev) {
+    let target = $(ev.target);
+    let datePicker = target.closest('.redui-date-picker');
+
+    if(target.closest('.picker-content').length) return;
+    if(datePicker.length) {
+        let dataid = datePicker.attr('data-id');
+
+        $('.redui-date-picker').each((index, item)=>{
+            if($(item).attr('data-id') != datePicker.attr('data-id')) {
+                if(!$(item).find('.picker-content').hasClass('none')) {
+                    RedUI.animaHide($(item).find('.picker-content'), 'redui-zoom-out-top');
+                }
+            }
+        });
+    }else{
+        $('.picker-content').each((index, item)=>{
+            RedUI.animaHide($(item), 'redui-zoom-out-top');
+        });
+    }
+});

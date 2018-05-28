@@ -20,6 +20,7 @@ const entryFuc = (el, opts) => {
 	el.addClass(opts.theme?opts.theme: 'them-reddata');
 	el.addClass(opts.customClass?opts.customClass: '');
     opts.dataSrc.dateNowCache = RedUI.getTimeFromStr(opts.dataSrc.format, opts.dataSrc.value).startTime;
+	el.attr('data-id', RedUI.rndNum());
 
     // 渲染dom
     renderHtml(el, opts.dataSrc);
@@ -51,16 +52,15 @@ const showOrHide = (el, opts) => {
 		let target = $(ev.target);
 
 		if(target.closest('.picker-content').length) return;
-		if(el.find('.picker-content').css('display') == 'none') {
-			el.find('.picker-content').css('display', 'block');
+		if(el.find('.picker-content').hasClass('none')) {
+			RedUI.animaShow(el.find('.picker-content'), 'redui-zoom-in-top');
 		}else{
-			el.find('.picker-content').css('display', 'none');
+			RedUI.animaHide(el.find('.picker-content'), 'redui-zoom-out-top');
 		}
 	});
 }
 
 const datePickerPos = (el, opts) => {
-	// console.log(el.offset());
 	// 计算控件底部剩余空间高度
 	let clinetHeight = $(window).height();
 	let clinetWidth = $(window).width();
@@ -146,9 +146,6 @@ const datePickerPos = (el, opts) => {
 			}).removeClass('left right').addClass('left');
 		}
 	}
-
-
-	console.log(leftBottomHeight);
 }
 
 const datePageJump = (el, opts) => {

@@ -44,8 +44,39 @@ const numToDuble = (num) => {
 	}
 }
 
+const animaShow = (el, type) => {
+    let $el = $(el);
+
+    if(!$el.hasClass('none')) return $el.removeClass(type);
+    $el.removeClass(type);
+    $el.removeClass('none').addClass(type).unbind('animationend').bind('animationend', function() {
+        $el.removeClass(type);
+    });
+}
+
+const animaHide = (el, type) => {
+    let $el = $(el);
+
+
+    if($el.hasClass('none')) return $el.removeClass(type);
+    $el.removeClass(type);
+    console.log(11);
+    $el.addClass(type).unbind('animationend').bind('animationend', function() {
+        $el.removeClass(type).addClass('none');
+    });
+}
+
+const rndNum = () => {
+    let str = Math.random() + '';
+
+	return str.split('.')[1];
+}
+
 export default {
     bt,
     getTimeFromStr,
-    numToDuble
+    numToDuble,
+    animaShow,
+    animaHide,
+    rndNum
 }
